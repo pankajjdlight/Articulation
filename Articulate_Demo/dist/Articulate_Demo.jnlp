@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Articulate_Demo.jnlp">
+  <information>
+    <title>Articulate_Demo</title>
+    <vendor>AMW Design PC 2</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Articulate_Demo.jar" size="4130758" download="eager" />
+    <jar href="lib\itextpdf-5.4.2.jar" size="1924147" download="eager" />
+    <jar href="lib\jfoenix-9.0.6.jar" size="2374031" download="eager" />
+    <jar href="lib\mail.jar" size="666983" download="eager" />
+    <jar href="lib\org.apache.commons.io.jar" size="83613" download="eager" />
+    <jar href="lib\simple-java-mail-4.4.5.jar" size="189587" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.23.1.jar" size="6733696" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Articulate_Demo" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="loginmodule.LoginModule"  name="Articulate_Demo" />
+  <update check="always"/>
+</jnlp>

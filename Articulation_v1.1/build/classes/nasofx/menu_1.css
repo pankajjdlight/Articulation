@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 15, 2017, 5:15:24 PM
+    Author     : DoD
+*/
+
+.button:hover{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+.menu-bar .label {
+    -fx-font-size: 12 pt;
+    -fx-font-family: "Segoe UI Light";
+   -fx-text-fill: #404040;
+
+}
+
+.linear-grad1{
+   -fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #dc143c, #32cd32);
+}
+
+.linear-grad-to-bottom1{
+    -fx-background-color: linear-gradient(to bottom, #d3d3d3, #c0c0c0);
+}
+
+.linear-grad-to-bottom2{
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #eeeeee);
+}
+
+.linear-grad-to-bottom3{
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #eeeeee);
+}
+.linear-grad-to-top{
+    -fx-background-color: linear-gradient(to top, #ff7f50, #6a5acd);
+}
+
+.linear-grad-to-left{
+    -fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd);
+}
+
+.linear-grad-to-right{
+    -fx-background-color: linear-gradient(to right, #ff7f50, #6a5acd);
+}
+
+.linear-grad-to-bottom-left{
+    -fx-background-color: linear-gradient(to bottom left, #ff7f50, #6a5acd);
+}
+

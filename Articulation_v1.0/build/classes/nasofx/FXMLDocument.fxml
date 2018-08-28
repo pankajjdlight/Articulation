@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="masterap" prefHeight="610.0" prefWidth="1200.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nasofx.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutY="477.0" prefHeight="152.0" prefWidth="1200.0" styleClass="linear-grad-to-bottom3" stylesheets="@menu.css">
+         <children>
+            <ToolBar layoutX="500.0" layoutY="54.0" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #d3d3d3;" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="434.0">
+              <items>
+                <Button fx:id="rewindbtn" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#rewindseek" onMouseEntered="#rewindenter" opacity="0.9" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: ;" styleClass="linear-grad-to-bottom-left" stylesheets="@button.css">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/fast-rewind-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="fwdbtn" layoutX="10.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#forwardseek" onMouseEntered="#fwdenter" opacity="0.9" prefHeight="29.0" prefWidth="47.0" stylesheets="@button.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/fast-forward-arrowhead-symbol.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="playbtn" layoutX="61.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#playsound" onMouseEntered="#playenter" opacity="0.9" prefHeight="32.0" prefWidth="47.0" stylesheets="@button.css">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/play-arrow-(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="stopbtn" layoutX="112.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#stopsound" onMouseEntered="#stopenter" opacity="0.9" prefHeight="32.0" prefWidth="47.0" stylesheets="@button.css">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/video-player-stop-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="recordbtn1" layoutX="112.0" layoutY="8.0" mnemonicParsing="false" onAction="#record" onMouseEntered="#recordenter" opacity="0.9" prefHeight="32.0" prefWidth="47.0" styleClass="linear-grad-to-bottom-left" stylesheets="@button.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/record_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </children></AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="1.0">
+         <children>
+            <AnchorPane layoutX="-2.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <AnchorPane />
+                        <AnchorPane layoutX="1.0" layoutY="93.0" prefHeight="375.0" prefWidth="1200.0" style="-fx-background-color: #222222;" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <MenuBar layoutX="2.0" layoutY="1.0" prefHeight="29.0" prefWidth="1193.0" styleClass="linear-grad-to-bottom1" stylesheets="@menu.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Language">
+               <items>
+                  <Menu mnemonicParsing="false" text="Hindi">
+                    <items>
+                        <Menu mnemonicParsing="false" text="/aa/">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onclickHindiInitial" text="Initial" />
+                              <MenuItem mnemonicParsing="false" onAction="#onclickHindiMedial" text="Medial" />
+                            <MenuItem mnemonicParsing="false" onAction="#onclickHindiFinal" text="Final" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="English">
+                           <items>
+                              <Menu mnemonicParsing="false" text="/aa/">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Initial" />
+                                    <MenuItem mnemonicParsing="false" text="Medial" />
+                                    <MenuItem mnemonicParsing="false" text="Final" />
+                                 </items>
+                              </Menu>
+                           </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="open_menu_item" mnemonicParsing="false" onAction="#open_button_Event" text="Open" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="New" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="saveas" mnemonicParsing="false" onAction="#saveas" text="Save as" />
+                  <MenuItem fx:id="closebtn" mnemonicParsing="false" onAction="#closesystem" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit" visible="false">
+            <items>
+              <MenuItem fx:id="selectall" disable="true" mnemonicParsing="false" onAction="#selectallfunction" text="Select all" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Select inverse" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Cut" />
+                  <MenuItem fx:id="copy" disable="true" mnemonicParsing="false" onAction="#copy" text="Copy" />
+                  <MenuItem fx:id="pasteitem" disable="true" mnemonicParsing="false" onAction="#paste" text="Paste" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Select and Play" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Re-sample" visible="false">
+               <items>
+                  <CheckMenuItem fx:id="mi8k" mnemonicParsing="false" onAction="#SR8" text="8 kHz" />
+                  <CheckMenuItem fx:id="mi11k" mnemonicParsing="false" onAction="#SR11" text="11.025 khz" />
+                  <CheckMenuItem fx:id="mi16k" mnemonicParsing="false" onAction="#SR16" text="16 kHz" />
+                  <CheckMenuItem fx:id="mi22k" mnemonicParsing="false" onAction="#SR22" text="22.05 kHz" />
+                  <CheckMenuItem fx:id="mi32k" mnemonicParsing="false" onAction="#SR32" text="32 kHz" />
+                  <CheckMenuItem fx:id="mi44k" mnemonicParsing="false" onAction="#SR44" text="44.1 kHz" />
+                  <CheckMenuItem fx:id="mi48k" mnemonicParsing="false" onAction="#SR48" text="48 kHz" />
+                  <CheckMenuItem fx:id="mi96k" mnemonicParsing="false" onAction="#SR96" text="96 kHz" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Analyse">
+              <items>
+                  <Menu mnemonicParsing="false" text="Articulation error">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="k" />
+                        <MenuItem mnemonicParsing="false" text="t" />
+                        <MenuItem mnemonicParsing="false" text="T" />
+                        <MenuItem mnemonicParsing="false" text="p" />
+                        <MenuItem mnemonicParsing="false" text="g" />
+                        <MenuItem mnemonicParsing="false" text="d" />
+                        <MenuItem mnemonicParsing="false" text="D" />
+                        <MenuItem mnemonicParsing="false" text="ch" />
+                        <MenuItem mnemonicParsing="false" text="j" />
+                        <MenuItem mnemonicParsing="false" text="s" />
+                        <MenuItem mnemonicParsing="false" text="sh" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="Select_Hypernasality" disable="true" mnemonicParsing="false" onAction="#Select_Check_hypernalasityclick" text="Seclect &amp; Check Hypernasality" visible="false" />
+                <MenuItem fx:id="hypernasality" disable="true" mnemonicParsing="false" onAction="#hypernalasityclick" text="Hypernasality" visible="false" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Intelligibility" visible="false" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Voicing error" visible="false" />
+                  <MenuItem fx:id="scorecard" disable="true" mnemonicParsing="false" onAction="#scorecardclick" text="Score card" visible="false" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openwebpage" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="TP" layoutX="4.0" layoutY="94.0" prefHeight="375.0" prefWidth="1200.0" style="-fx-background-color: #222222;" stylesheets="@tab1.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+        <tabs>
+          <Tab fx:id="tab1" closable="false">
+               <content>
+                  <AnchorPane fx:id="tab1ap">
+                     <children>
+                        <ScrollPane fx:id="wavepane" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" pannable="true" prefHeight="346.0" prefWidth="1180.0" style="-fx-background-color: #232323;" stylesheets="@test.css" vbarPolicy="NEVER">
+                           <content>
+                              <LineChart fx:id="lineChartForRecord" createSymbols="false" horizontalZeroLineVisible="false" legendVisible="false" stylesheets="@test.css" verticalZeroLineVisible="false">
+                                <xAxis>
+                                  <NumberAxis forceZeroInRange="false" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis autoRanging="false" lowerBound="-1.0" side="LEFT" upperBound="1.0" />
+                                </yAxis>
+                              </LineChart>
+                           </content></ScrollPane>
+                        <ImageView fx:id="marker" fitHeight="346.0" fitWidth="29.0" layoutX="21.0" onMouseDragged="#markerdrag" onMousePressed="#markerpress" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/marker.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="H_RESIZE" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabForPaste" closable="false">
+               <content>
+                  <AnchorPane fx:id="tab1ap1">
+                     <children>
+                        <ScrollPane fx:id="wavepaneForPaste" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" pannable="true" prefHeight="346.0" prefWidth="1180.0" style="-fx-background-color: #232323;" vbarPolicy="NEVER">
+                           <stylesheets>
+                              <URL value="@test.css" />
+                              <URL value="@test.css" />
+                           </stylesheets></ScrollPane>
+                        <ImageView fx:id="marker1" fitHeight="346.0" fitWidth="29.0" layoutX="21.0" onMouseDragged="#markerdrag" onMousePressed="#markerpress" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/marker.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="H_RESIZE" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabForImageDisplay" closable="false">
+               <content>
+                  <AnchorPane fx:id="tab1ap11">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <children>
+                        <HBox fx:id="imagedisplay" layoutX="300.0" layoutY="39.0" prefHeight="273.0" prefWidth="703.0" spacing="10.0" />
+                        <Label fx:id="FirstImage" layoutX="297.0" layoutY="14.0" prefHeight="17.0" prefWidth="106.0" text="First" />
+                        <Label fx:id="SecondImage" layoutX="778.0" layoutY="14.0" prefHeight="17.0" prefWidth="106.0" text="Second" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane layoutY="29.0" prefHeight="65.0" prefWidth="1200.0" styleClass="linear-grad-to-bottom2" stylesheets="@menu.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="counterap" layoutX="486.0" layoutY="7.0" prefHeight="50.0" prefWidth="225.0" stylesheets="@menu.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="486.0" AnchorPane.rightAnchor="489.0" AnchorPane.topAnchor="7.0">
+               <children>
+                  <AnchorPane layoutY="24.0" prefHeight="24.0" prefWidth="224.0" styleClass="linear-grad-to-bottom1" stylesheets="@menu.css" />
+                  <AnchorPane prefHeight="24.0" prefWidth="224.0" styleClass="linear-grad-to-bottom1" stylesheets="@menu.css" />
+                  <Label fx:id="hour" alignment="CENTER" layoutY="-5.0" prefHeight="41.0" prefWidth="54.0" text="00" textAlignment="CENTER" textFill="#686546">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="DS-Digital Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min" alignment="CENTER" layoutX="49.0" layoutY="-5.0" prefHeight="41.0" prefWidth="54.0" text="00" textFill="#686546">
+                     <font>
+                        <Font name="DS-Digital Bold" size="35.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="sec" alignment="CENTER" layoutX="98.0" layoutY="-6.0" prefHeight="41.0" prefWidth="54.0" text="00" textFill="#686546">
+                     <font>
+                        <Font name="DS-Digital Bold" size="35.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="milisec" alignment="CENTER" layoutX="154.0" layoutY="-6.0" prefHeight="41.0" prefWidth="62.0" text="000" textFill="#686546">
+                     <font>
+                        <Font name="DS-Digital Bold" size="35.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="31.0" prefHeight="17.0" prefWidth="25.0" text="hour" textFill="#686546">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="69.0" layoutY="31.0" prefHeight="17.0" prefWidth="25.0" text="min" textFill="#686546">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="123.0" layoutY="31.0" prefHeight="17.0" prefWidth="25.0" text="sec" textFill="#686546">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="168.0" layoutY="31.0" prefHeight="17.0" prefWidth="37.0" text="milisec" textFill="#686546">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="-8.0" prefHeight="29.0" prefWidth="12.0" text=":" textFill="#686546">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="98.0" layoutY="-8.0" prefHeight="29.0" prefWidth="12.0" text=":" textFill="#686546">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="-8.0" prefHeight="29.0" prefWidth="12.0" text=":" textFill="#686546">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Slider fx:id="slider" layoutX="1042.0" layoutY="48.0" onMouseDragged="#Zoomfunction">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+         </children></AnchorPane>
+      <AnchorPane fx:id="resultpane" layoutX="939.0" layoutY="29.0" prefHeight="447.0" prefWidth="259.0" styleClass="linear-grad-to-bottom3" stylesheets="@menu.css">
+         <children>
+            <Button mnemonicParsing="false" onAction="#hideresult" text="&gt;&gt;" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

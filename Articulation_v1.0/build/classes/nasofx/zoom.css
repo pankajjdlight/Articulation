@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 8, 2017, 10:31:26 AM
+    Author     : DoD
+*/
+
+.chart-plot-background {
+    -fx-border-color: transparent;
+    
+    -fx-background-color: #232323;
+    /*-fx-fill-width: true;
+    -fx-fill-height: true;
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+   /* -fx-tab-max-height: 2em;
+      -fx-tab-min-height: 2em;
+      -fx-tab-max-width: 2em;
+      -fx-tab-min-width: 2em;
+    /*-fx-border-insets: -2px;*/
+}
+
+.axis:top {
+    -fx-border-color: transparent;
+}
+
+.axis:right {
+    -fx-border-color: transparent;
+}
+
+.axis:bottom {
+    -fx-border-color: transparent;
+}
+
+.axis:left {
+    -fx-border-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #C1C1C1;
+    -fx-opacity: 0.5;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+    -fx-opacity: 0.5;
+}
+.chart-series-line { /*-fx-stroke:transparent ;*/
+                   /* -fx-stroke-type: inside;*/
+                   -fx-stroke:#43DA95
+                    -fx-smooth: true;
+                  -fx-stroke-line-cap: round;
+                    -fx-stroke-line-join:round;
+                    -fx-stroke-width: .005px;}
+
+
+ .chart-plot-background {
+    -fx-background-color: linear-gradient(to bottom, #222222, #444444);
+}

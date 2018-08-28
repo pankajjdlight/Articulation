@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="694.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="articulate.pkgnew.FXMLDocumentControllerArti">
+    <children>
+      <SplitPane dividerPositions="0.3395061728395062" layoutX="8.0" layoutY="7.0" prefHeight="676.0" prefWidth="974.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="193.0">
+               <children>
+                  <MenuButton layoutX="100.0" layoutY="162.0" mnemonicParsing="false" text="Language">
+                    <items>
+                        <Menu mnemonicParsing="false" text="HIndi">
+                          <items>
+                              <Menu mnemonicParsing="false" text="/aa/">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#onclickHindiInitial" text="initial" />
+                                  <MenuItem mnemonicParsing="false" onAction="#onclickHindiMedial" text="medial" />
+                                    <MenuItem mnemonicParsing="false" onAction="#onclickHindiFinal" text="final" />
+                                </items>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" text="/a/" />
+                              <MenuItem mnemonicParsing="false" text="/i/" />
+                              <MenuItem mnemonicParsing="false" text="/a/" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="English">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#onclickEnglish" text="/aa/" />
+                              <MenuItem mnemonicParsing="false" onAction="#onclickEnglish" text="//" />
+                              <MenuItem mnemonicParsing="false" onAction="#onclickEnglish" text="///" />
+                              <MenuItem mnemonicParsing="false" onAction="#onclickEnglish" text="////" />
+                              <MenuItem mnemonicParsing="false" onAction="#onclickEnglish" text="//////" />
+                          </items>
+                        </Menu>
+                    </items>
+                  </MenuButton>
+                  <ToolBar fx:id="toolbar" layoutX="3.0" layoutY="527.0" prefHeight="40.0" prefWidth="318.0">
+                    <items>
+                      <Button fx:id="playbtn" mnemonicParsing="false" onAction="#playSound" prefHeight="25.0" prefWidth="39.0" text="Play" />
+                        <Button fx:id="stopbtn" mnemonicParsing="false" onAction="#pauseSound" text="Stop" />
+                        <Button fx:id="forwardbtn" mnemonicParsing="false" onAction="#forwardSound" text="Forward" />
+                        <Button fx:id="rewindbtn" mnemonicParsing="false" onAction="#rewindSound" text="Rewind" />
+                        <Button fx:id="recordbtn" mnemonicParsing="false" onAction="#record" text="Record" />
+                        <Button fx:id="file" mnemonicParsing="false" onAction="#redirect" text="File" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="392.0">
+               <children>
+                  <HBox fx:id="Imagedisplay" fillHeight="false" layoutX="10.0" layoutY="206.0" prefHeight="455.0" prefWidth="662.0" spacing="5.0" />
+                  <Label fx:id="first_image" layoutX="106.0" layoutY="173.0" prefHeight="17.0" prefWidth="95.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="second_image" layoutX="471.0" layoutY="174.0" prefHeight="17.0" prefWidth="95.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <AnchorPane fx:id="recordPane" layoutY="161.0" prefHeight="392.0" prefWidth="679.0" style="-fx-background-color: #222222;">
+                     <children>
+                        <LineChart fx:id="lineChartForRecord1" createSymbols="false" horizontalZeroLineVisible="false" layoutY="12.0" legendVisible="false" prefHeight="401.0" prefWidth="680.0" style="-fx-background-color: #22222;" stylesheets="@test.css" verticalZeroLineVisible="false">
+                           <xAxis>
+                              <NumberAxis forceZeroInRange="false" minorTickVisible="false" side="BOTTOM" style="-fx-background-color: #22222;" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis autoRanging="false" forceZeroInRange="false" lowerBound="-1.0" minorTickVisible="false" prefHeight="359.0" prefWidth="10.0" side="LEFT" style="-fx-background-color: #22222;" tickMarkVisible="false" upperBound="1.0" />
+                           </yAxis>
+                        </LineChart>
+                        <Button mnemonicParsing="false" onAction="#closerecordwindow" style="-fx-background-color: #22222;" text="&gt;&gt;" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
