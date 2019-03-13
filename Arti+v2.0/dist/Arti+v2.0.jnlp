@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Arti+v2.0.jnlp">
+  <information>
+    <title>Arti+v2.0</title>
+    <vendor>AMW Design PC 2</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path="/usr/local/MATLAB/R2018_Latest/bin/glnxa64" "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Arti+v2.0.jar" size="5405679" download="eager" />
+    <jar href="lib\engine.jar" size="395010" download="eager" />
+    <jar href="lib\io-7.0.0.jar" size="627553" download="eager" />
+    <jar href="lib\itextpdf-5.5.13.jar" size="2320581" download="eager" />
+    <jar href="lib\jfoenix-9.0.6.jar" size="2374031" download="eager" />
+    <jar href="lib\jmi.jar" size="318672" download="eager" />
+    <jar href="lib\kernel-7.0.0.jar" size="967008" download="eager" />
+    <jar href="lib\mail.jar" size="666983" download="eager" />
+    <jar href="lib\mvm.jar" size="73552" download="eager" />
+    <jar href="lib\org.apache.commons.io.jar" size="83613" download="eager" />
+    <jar href="lib\simple-java-mail-4.4.5.jar" size="189587" download="eager" />
+    <jar href="lib\slf4j-api-1.7.13.jar" size="33088" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.23.1.jar" size="6733696" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Arti+v2.0" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="articulate.Articulate"  name="Arti+v2.0" />
+  <update check="always"/>
+</jnlp>

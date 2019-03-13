@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="articulate.FXMLDocumentController">
+   <children>
+      <MenuButton contentDisplay="TOP" layoutX="276.0" layoutY="87.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="226.0" stylesheets="@button1.css" text="Choose language">
+        <items>
+            <Menu mnemonicParsing="false" text="HINDI">
+              <items>
+                  <MenuItem fx:id="H_uu" mnemonicParsing="false" onAction="#H_uu" text="/uu/" />
+                  <MenuItem mnemonicParsing="false" onAction="#H_n" text="/n/" />
+                  <MenuItem mnemonicParsing="false" onAction="#H_g" text="/g/" />
+                  <MenuItem mnemonicParsing="false" onAction="#H_e" text="/e/" />
+                  <Menu mnemonicParsing="false" text="View More">
+                     <items>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Initial" />
+                              <MenuItem mnemonicParsing="false" text="Medial" />
+                              <MenuItem mnemonicParsing="false" text="Final" />
+                           </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="ENGLISH">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#E_d" text="/d/" />
+                  <MenuItem mnemonicParsing="false" onAction="#E_b" text="/b/" />
+                  <MenuItem mnemonicParsing="false" onAction="#E_l" text="/l/" />
+                  <MenuItem mnemonicParsing="false" onAction="#E_w" text="/w/" />
+                  <MenuItem mnemonicParsing="false" onAction="#E_v" text="/v/" />
+               </items>
+            </Menu>
+        </items>
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </MenuButton>
+   </children>
+</AnchorPane>
